@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  sails:
+    build: .
+    container_name: sails_container
+    volumes:
+      - '.:/app/src'
+    ports:
+      - "1337:1337"
+    command: "sails lift && npm install -g nodemon"
