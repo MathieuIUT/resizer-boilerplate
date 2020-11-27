@@ -1,10 +1,13 @@
-version: "3.8"
+version: "3"
 services:
-  sails:
+  web:
     build: .
-    container_name: sails_container
-    volumes:
-      - '.:/app/src'
+    environment:
+      - NODE_ENV=development
     ports:
-      - "1337:1337"
-    command: "sails lift && npm install -g nodemon"
+      - 1337:1337
+    command: "npm run dev"
+    volumes:
+      - .:/usr/src/app
+    container_name: sails_container
+    
