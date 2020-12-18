@@ -14,6 +14,7 @@ module.exports = {
    */
   login: async function (req, res) {
     passport.authenticate('local', {successRedirect: "/", failureRedirect: "/login"})(req,res);
+
     /* 
     passport.authenticate('local', function(err, user, info){
       if((err) || (!user)) {

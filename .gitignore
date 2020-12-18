@@ -132,3 +132,6 @@ lib-cov
 *.out
 *.pid
 
+docker-compose.yml
+Dockerfile
+config/datastore.js
