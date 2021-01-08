@@ -18,11 +18,12 @@ services:
         - db_data:/var/lib/mysql
     environment:
       - MYSQL_USER=admin
-      - MYSQL_ROOT_PASSWORD=admin, 
+      - MYSQL_ROOT_PASSWORD=admin,
       - MYSQL_PASSWORD=admin
       - MYSQL_DATABASE=resizer_db
     container_name: mysql
   redis:
     image: redis
+    container_name: resizer-boilerplate_redis_1
 volumes:
   db_data:
