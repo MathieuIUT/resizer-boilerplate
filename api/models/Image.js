@@ -23,11 +23,6 @@ module.exports = {
       required: true
     },
 
-    uploader : {
-      type: 'number',
-      required: true
-    },
-
     owner: {
       model: 'user'
     }

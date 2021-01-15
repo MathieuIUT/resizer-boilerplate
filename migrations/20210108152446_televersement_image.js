@@ -3,7 +3,7 @@ exports.up = function(knex) {
       table.increments();
       table.string('path').notNullable();
       table.string('name').notNullable();
-      table.integer('uploader').notNullable();
+      table.integer('owner').notNullable();
       table.bigInteger('createdAt').notNullable();
       table.bigInteger('updatedAt').notNullable();
     });
