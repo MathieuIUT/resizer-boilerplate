@@ -4,6 +4,11 @@
       <% if (req.user) {%>
         <p>Yo t'es connecté</p>
         <p> <%= req.user.username %> </p>
+        <form action="./upload" method="POST">
+            <label htmlFor="image">Image à envoyer:</label>
+            <input type="file" id="image" name="image" accept="image/png, image/jpeg">
+            <button type="submit">Envoyer</button>
+        </form>
       <% } else { %>
         <p> Not logged in </p>
       <% } %>
